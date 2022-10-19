@@ -1,0 +1,50 @@
+% Предустановленные пакеты:
+%   texlive-full
+% Команда для сборки:
+%   latexmk -pdf -bibtex -latexoption="-file-line-error -synctex=1 -interaction=nonstopmode -shell-escape" $fullname
+
+\documentclass[10pt]{geodmanual}
+
+\title{Гравиметр CG-6 Autograv\texttrademark{}}
+
+\orgFullName{}
+\orgShortName{}
+\divName{}
+\depName{}
+\manualVersion{C}
+
+\manualType{Инструкция по эксплуатации}
+\manualYear{2022}
+\manualCity{Астана}
+\def \pathtotitlepic {figures/cg6_title.png}
+
+\includeonly{
+  chapters/instrument_overview,
+  chapters/getting_started,
+  chapters/setting_up_your_cg6_autograv,
+  chapters/operating_the_cg6_autograv_in_the_field,
+  chapters/maintenance_and_troubleshooting,
+  chapters/reference_information,
+}
+
+%\manualVersion{\ShowRepoVersion}
+
+
+\begin{document}
+
+\newcommand{\cg}{CG-6 Autograv\texttrademark{}}
+
+\maketitle
+\tableofcontents
+
+\include{chapters/instrument_overview}
+\include{chapters/getting_started}
+\include{chapters/setting_up_your_cg6_autograv}
+\include{chapters/operating_the_cg6_autograv_in_the_field}
+\include{chapters/maintenance_and_troubleshooting}
+\include{chapters/reference_information}
+
+%\bibliographystyle{apalike}
+%\bibliography{}
+
+\end{document}
